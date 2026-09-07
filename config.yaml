@@ -1,0 +1,86 @@
+environment:
+  app: UFSMDigital
+  device-id: d4db6216-31d2-4bfa-ab64-02a4fc8ef7e6
+  device-info: Apple iPhone ios:15.7.3
+  message-token: c7ptbA7De0nvnvagiGEgbC:APA91bE1AABlRKEjUB_HCB_yVKmocYxOgym2ebWlpP6hCjMYpTcgiTMiKTu7KZgTMLIrv55SieM0fLqWBIiMLULrwTDISoszte9zMAVaMfQqt9cxAHaxJ47moYT628v9JMBQftaLVxKm
+
+behavior:
+  use-monday-schedule-on-friday-without-weekend: true
+
+schedules:
+  - weekday: Mon
+    restaurant: 2
+    vegetarian: false
+    coffee: false
+    lunch: true
+    dinner: false
+
+  - weekday: Mon
+    restaurant: 1
+    vegetarian: false
+    coffee: true
+    lunch: false
+    dinner: false
+
+  - weekday: Tue
+    restaurant: 2
+    vegetarian: false
+    coffee: false
+    lunch: true
+    dinner: false
+
+  - weekday: Tue
+    restaurant: 1
+    vegetarian: false
+    coffee: true
+    lunch: false
+    dinner: false
+
+  - weekday: Wed
+    restaurant: 2
+    vegetarian: false
+    coffee: false
+    lunch: true
+    dinner: false
+
+  - weekday: Wed
+    restaurant: 1
+    vegetarian: false
+    coffee: true
+    lunch: false
+    dinner: false
+
+  - weekday: Thu
+    restaurant: 2
+    vegetarian: false
+    coffee: false
+    lunch: true
+    dinner: false
+
+  - weekday: Thu
+    restaurant: 1
+    vegetarian: false
+    coffee: true
+    lunch: false
+    dinner: false
+
+  - weekday: Fri
+    restaurant: 1
+    vegetarian: false
+    coffee: false
+    lunch: false
+    dinner: true
+
+  - weekday: Fri
+    restaurant: 2
+    vegetarian: false
+    coffee: false
+    lunch: true
+    dinner: false
+
+  - weekday: Fri
+    restaurant: 1
+    vegetarian: false
+    coffee: true
+    lunch: false
+    dinner: false
