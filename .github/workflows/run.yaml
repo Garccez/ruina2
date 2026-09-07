@@ -1,0 +1,22 @@
+name: Ruina
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 10 * * *'
+
+jobs:
+  ruina:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+          cache: pip
+      - run: pip install -r requirements.txt
+      - name: Agendar refeições
+        env:
+          RUINA_USERNAME: ${{ secrets.Username }}
+          RUINA_PASSWORD: ${{ secrets.Password }}
+        run: python main.py
