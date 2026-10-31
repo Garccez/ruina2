@@ -9,6 +9,10 @@ import yaml
 import pytz
 from argparse import ArgumentParser
 from datetime import datetime, timedelta
+import socket
+import urllib3.util.connection as urllib3_cn
+
+urllib3_cn.allowed_gai_family = lambda: socket.AF_INET
 
 BASE_URL = 'https://portal.ufsm.br/mobile/webservice'
 API_VERSION = '5.5.7'
