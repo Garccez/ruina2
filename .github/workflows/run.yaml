@@ -3,7 +3,7 @@ name: Ruina
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 1 * * *'
+    - cron: '7 4 * * *'   # 01:07 em Brasília
 
 jobs:
   ruina:
