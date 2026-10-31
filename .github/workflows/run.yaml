@@ -3,7 +3,7 @@ name: Ruina
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 01 * * *'
+    - cron: '0 1 * * *'
 
 jobs:
   ruina:
@@ -15,6 +15,11 @@ jobs:
           python-version: '3.10'
           cache: pip
       - run: pip install -r requirements.txt
+      - name: Diagnóstico de rede
+        run: |
+          getent ahosts portal.ufsm.br
+          curl -4 -sv -m 15 -o /dev/null https://portal.ufsm.br/ || true
+          curl -6 -sv -m 15 -o /dev/null https://portal.ufsm.br/ || true
       - name: Agendar refeições
         env:
           RUINA_USERNAME: ${{ secrets.Username }}
